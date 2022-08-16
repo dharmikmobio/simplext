@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import { Vocab } from "./vocabList"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const randomNum = Math.floor(Math.random() * Math.floor(Vocab.length))
+	return (
+		<div className="App">
+			<h1>{Vocab[randomNum].FIELD1}</h1>
+			<h3>{Vocab[randomNum].FIELD2}</h3>
+		</div>
+	)
 }
 
-export default App;
+export default App
